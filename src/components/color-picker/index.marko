@@ -1,0 +1,17 @@
+class {
+  onInput(input) {
+    var colors = input.colors;
+ 
+    this.state = {
+      selectedColor: colors[0],
+      colors
+    };
+  }
+ 
+  onColorSelected(color) {
+    this.state.selectedColor = color;
+  }
+}
+div
+    color-picker-header color=state.selectedColor
+    color-picker-footer colors=state.colors on-colorSelected('onColorSelected')
